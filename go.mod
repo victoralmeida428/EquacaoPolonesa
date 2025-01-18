@@ -1,3 +1,3 @@
-module github.com/victoralmeida428/numerical_expression
+module numerical_expression
 
 go 1.23.4

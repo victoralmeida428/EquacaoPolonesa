@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/victoralmeida428/EquacaoPolonesa/tree"
+	"numerical_expression/tree"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	shuntingyard "github.com/victoralmeida428/EquacaoPolonesa/ShuntingYard"
-	"github.com/victoralmeida428/EquacaoPolonesa/stack"
+	shuntingyard "numerical_expression/ShuntingYard"
+	"numerical_expression/stack"
 )
 
 type ITree interface {

@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/victoralmeida428/EquacaoPolonesa/queue"
-	"github.com/victoralmeida428/EquacaoPolonesa/stack"
+	"numerical_expression/queue"
+	"numerical_expression/stack"
 )
 
 // Precedence and associativity of operators

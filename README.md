@@ -14,7 +14,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/victoralmeida428/numerical_expression/tree"
+	"numerical_expression/tree"
 )
 
 func main() {

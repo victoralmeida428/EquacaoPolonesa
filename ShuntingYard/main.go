@@ -1,10 +1,11 @@
 package shuntingyard
 
 import (
-	"equacao/queue"
-	"equacao/stack"
 	"strconv"
 	"strings"
+
+	"github.com/victoralmeida428/EquacaoPolonesa/queue"
+	"github.com/victoralmeida428/EquacaoPolonesa/stack"
 )
 
 // Precedence and associativity of operators
@@ -36,7 +37,7 @@ func isFunction(token string) bool {
 func ShuntingYard(expression string) string {
 	tokens := strings.Fields(expression) // Split expression into tokens
 	outputQueue := queue.New()           // Output queue
-	operatorStack := stack.Stack{}             // Operator stack
+	operatorStack := stack.Stack{}       // Operator stack
 
 	for _, token := range tokens {
 		if isNumber(token) {

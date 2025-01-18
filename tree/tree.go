@@ -1,10 +1,11 @@
 package tree
 
 import (
-	shuntingyard "equacao/ShuntingYard"
-	"equacao/stack"
 	"fmt"
 	"strings"
+
+	shuntingyard "github.com/victoralmeida428/EquacaoPolonesa/ShuntingYard"
+	"github.com/victoralmeida428/EquacaoPolonesa/stack"
 )
 
 type ITree interface {

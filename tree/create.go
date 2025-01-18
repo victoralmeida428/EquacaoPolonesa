@@ -1,6 +1,6 @@
 package tree
 
-import shuntingyard "equacao/ShuntingYard"
+import shuntingyard "github.com/victoralmeida428/EquacaoPolonesa/ShuntingYard"
 
 func (tree *Tree) buildTree() {
 	tree.Root = tree.createNode()

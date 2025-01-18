@@ -22,9 +22,9 @@ func (tree *Tree) evaluate(node *Node) float64 {
 	
 	switch node.Data {
 	case "+":
-		return leftValue+rightValue
+		return rightValue+leftValue
 	case "-":
-		return leftValue - rightValue
+		return rightValue - leftValue
 	case "*":
 		return leftValue * rightValue
 	case "/":

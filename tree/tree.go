@@ -10,17 +10,16 @@ import (
 type ITree interface {
 	GetRoot() *Node
 	Print()
+	Calculate() float64
 }
 
-
-
 type Tree struct {
-	Exp string `json:"expression"`
+	Exp  string `json:"expression"`
 	data *stack.Stack
 	Root *Node
 }
 
-func (tree *Tree) convertExp(){
+func (tree *Tree) convertExp() {
 	exp := shuntingyard.ShuntingYard(tree.Exp)
 	tokens := strings.Fields(exp)
 	for _, token := range tokens {
@@ -28,7 +27,7 @@ func (tree *Tree) convertExp(){
 	}
 }
 
-func (tree *Tree) GetRoot() *Node{
+func (tree *Tree) GetRoot() *Node {
 	return tree.Root
 }
 func (tree *Tree) printTree(node *Node, prefix string, isLeft bool) {
@@ -54,14 +53,14 @@ func (tree *Tree) printTree(node *Node, prefix string, isLeft bool) {
 
 	// Chama recursivamente para os filhos
 	tree.printTree(node.Left, childPrefix, true)
-	tree.printTree(node.Rigth, childPrefix, false)
+	tree.printTree(node.Right, childPrefix, false)
 }
 
-func (tree *Tree) Print(){
+func (tree *Tree) Print() {
 	tree.printTree(tree.Root, "   ", false)
 }
 
-func New(exp string) ITree{
+func New(exp string) ITree {
 	tree := Tree{Exp: exp, data: stack.New()}
 	tree.convertExp()
 	tree.buildTree()

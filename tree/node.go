@@ -1,7 +1,7 @@
 package tree
 
-type Node struct{
-	Data string
-	Left *Node
-	Rigth *Node
+type Node struct {
+	Data  string
+	Left  *Node
+	Right *Node
 }

@@ -2,11 +2,11 @@ package tree
 
 import shuntingyard "equacao/ShuntingYard"
 
-func (tree *Tree) buildTree(){
+func (tree *Tree) buildTree() {
 	tree.Root = tree.createNode()
 }
 
-func (tree *Tree) createNode() *Node{
+func (tree *Tree) createNode() *Node {
 	if tree.data == nil {
 		return nil
 	}
@@ -16,10 +16,10 @@ func (tree *Tree) createNode() *Node{
 	node := &Node{
 		Data: token,
 	}
-	if shuntingyard.IsOperator(token){
+	if shuntingyard.IsOperator(token) {
 		node.Left = tree.createNode()
-		node.Rigth = tree.createNode()
+		node.Right = tree.createNode()
 	}
-	
-	return node	
+
+	return node
 }

@@ -14,12 +14,16 @@ var Precedence = map[string]int{
 	"-": 1,
 	"*": 2,
 	"/": 2,
+	"^": 2,
+	"%": 2,
 }
 var leftAssociative = map[string]bool{
 	"+": true,
 	"-": true,
 	"*": true,
 	"/": true,
+	"^": true,
+	"%": true,
 }
 
 func IsOperator(token string) bool {
